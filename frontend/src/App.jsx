@@ -6,7 +6,7 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import AssignedToMe from "./pages/AssignedToMe";
 import { useAuth } from "./context/AuthContext";
-
+import "./App.css";
 function ProtectedRoute({ children }) {
     const { user, loading } = useAuth();
 
