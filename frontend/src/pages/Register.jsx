@@ -21,12 +21,20 @@ function Register() {
         setError("");
         setSuccess("");
 
-        if (!name || !email || !password || !confirmPassword) {
+        const cleanName = name.trim();
+        const cleanEmail = email.trim();
+
+        if (
+            !cleanName ||
+            !cleanEmail ||
+            !password ||
+            !confirmPassword
+        ) {
             setError("All fields are required.");
             return;
         }
 
-        if (name.length < 2) {
+        if (cleanName.length < 2) {
             setError("Name must be at least 2 characters.");
             return;
         }
@@ -44,7 +52,11 @@ function Register() {
         try {
             setLoading(true);
 
-            await register(name, email, password);
+            await register(
+                cleanName,
+                cleanEmail,
+                password
+            );
 
             setSuccess(
                 "Registration successful. Redirecting to login..."
@@ -54,7 +66,10 @@ function Register() {
                 navigate("/login");
             }, 1000);
         } catch (error) {
-            setError(error.message);
+            setError(
+                error?.message ||
+                "Registration failed. Please try again."
+            );
         } finally {
             setLoading(false);
         }
@@ -63,21 +78,34 @@ function Register() {
     return (
         <div className="auth-container">
             <div className="auth-card register-card">
+
                 <div className="auth-brand">
-                    <div className="auth-brand-icon">✓</div>
+                    <div className="auth-brand-icon">
+                        ✓
+                    </div>
 
                     <div>
                         <h1>TaskFlow</h1>
-                        <p>Plan. Collaborate. Complete.</p>
+                        <p>
+                            Plan. Collaborate. Complete.
+                        </p>
                     </div>
                 </div>
 
                 <div className="auth-heading">
                     <h2>Create Account</h2>
-                    <p>Start managing your projects with TaskFlow.</p>
+
+                    <p>
+                        Start managing your projects with
+                        TaskFlow.
+                    </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="auth-form">
+                <form
+                    onSubmit={handleSubmit}
+                    className="auth-form"
+                >
+
                     <div className="form-group">
                         <label htmlFor="register-name">
                             Full Name
@@ -151,7 +179,9 @@ function Register() {
                             autoComplete="new-password"
                             value={confirmPassword}
                             onChange={(event) =>
-                                setConfirmPassword(event.target.value)
+                                setConfirmPassword(
+                                    event.target.value
+                                )
                             }
                             placeholder="Re-enter your password"
                             disabled={loading}
@@ -159,13 +189,19 @@ function Register() {
                     </div>
 
                     {error && (
-                        <div className="auth-alert auth-alert-error">
+                        <div
+                            className="auth-alert auth-alert-error"
+                            role="alert"
+                        >
                             {error}
                         </div>
                     )}
 
                     {success && (
-                        <div className="auth-alert auth-alert-success">
+                        <div
+                            className="auth-alert auth-alert-success"
+                            role="status"
+                        >
                             {success}
                         </div>
                     )}
@@ -182,11 +218,15 @@ function Register() {
                 </form>
 
                 <div className="auth-footer">
-                    <span>Already have an account?</span>{" "}
+                    <span>
+                        Already have an account?
+                    </span>{" "}
+
                     <Link to="/login">
                         Sign in
                     </Link>
                 </div>
+
             </div>
         </div>
     );
