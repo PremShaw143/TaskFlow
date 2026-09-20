@@ -53,7 +53,6 @@ function Register() {
             setTimeout(() => {
                 navigate("/login");
             }, 1000);
-
         } catch (error) {
             setError(error.message);
         } finally {
@@ -63,111 +62,132 @@ function Register() {
 
     return (
         <div className="auth-container">
+            <div className="auth-card register-card">
+                <div className="auth-brand">
+                    <div className="auth-brand-icon">✓</div>
 
-            <div className="auth-card">
+                    <div>
+                        <h1>TaskFlow</h1>
+                        <p>Plan. Collaborate. Complete.</p>
+                    </div>
+                </div>
 
-                <h1>TaskFlow</h1>
+                <div className="auth-heading">
+                    <h2>Create Account</h2>
+                    <p>Start managing your projects with TaskFlow.</p>
+                </div>
 
-                <h2>Create Account</h2>
+                <form onSubmit={handleSubmit} className="auth-form">
+                    <div className="form-group">
+                        <label htmlFor="register-name">
+                            Full Name
+                        </label>
 
-                <form onSubmit={handleSubmit}>
+                        <input
+                            id="register-name"
+                            name="name"
+                            type="text"
+                            autoComplete="name"
+                            value={name}
+                            onChange={(event) =>
+                                setName(event.target.value)
+                            }
+                            placeholder="Enter your name"
+                            disabled={loading}
+                        />
+                    </div>
 
-                    <label htmlFor="register-name">
-                        Name
-                    </label>
+                    <div className="form-group">
+                        <label htmlFor="register-email">
+                            Email Address
+                        </label>
 
-                    <input
-                        id="register-name"
-                        name="name"
-                        type="text"
-                        autoComplete="name"
-                        value={name}
-                        onChange={(event) =>
-                            setName(event.target.value)
-                        }
-                        placeholder="Enter your name"
-                    />
+                        <input
+                            id="register-email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            value={email}
+                            onChange={(event) =>
+                                setEmail(event.target.value)
+                            }
+                            placeholder="you@example.com"
+                            disabled={loading}
+                        />
+                    </div>
 
-                    <label htmlFor="register-email">
-                        Email
-                    </label>
+                    <div className="form-group">
+                        <label htmlFor="register-password">
+                            Password
+                        </label>
 
-                    <input
-                        id="register-email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        value={email}
-                        onChange={(event) =>
-                            setEmail(event.target.value)
-                        }
-                        placeholder="Enter your email"
-                    />
+                        <input
+                            id="register-password"
+                            name="password"
+                            type="password"
+                            autoComplete="new-password"
+                            value={password}
+                            onChange={(event) =>
+                                setPassword(event.target.value)
+                            }
+                            placeholder="Minimum 8 characters"
+                            disabled={loading}
+                        />
 
-                    <label htmlFor="register-password">
-                        Password
-                    </label>
+                        <span className="field-hint">
+                            Use at least 8 characters.
+                        </span>
+                    </div>
 
-                    <input
-                        id="register-password"
-                        name="password"
-                        type="password"
-                        autoComplete="new-password"
-                        value={password}
-                        onChange={(event) =>
-                            setPassword(event.target.value)
-                        }
-                        placeholder="Minimum 8 characters"
-                    />
+                    <div className="form-group">
+                        <label htmlFor="register-confirm-password">
+                            Confirm Password
+                        </label>
 
-                    <label htmlFor="register-confirm-password">
-                        Confirm Password
-                    </label>
-
-                    <input
-                        id="register-confirm-password"
-                        name="confirmPassword"
-                        type="password"
-                        autoComplete="new-password"
-                        value={confirmPassword}
-                        onChange={(event) =>
-                            setConfirmPassword(event.target.value)
-                        }
-                        placeholder="Confirm your password"
-                    />
+                        <input
+                            id="register-confirm-password"
+                            name="confirmPassword"
+                            type="password"
+                            autoComplete="new-password"
+                            value={confirmPassword}
+                            onChange={(event) =>
+                                setConfirmPassword(event.target.value)
+                            }
+                            placeholder="Re-enter your password"
+                            disabled={loading}
+                        />
+                    </div>
 
                     {error && (
-                        <p className="error-message">
+                        <div className="auth-alert auth-alert-error">
                             {error}
-                        </p>
+                        </div>
                     )}
 
                     {success && (
-                        <p>
+                        <div className="auth-alert auth-alert-success">
                             {success}
-                        </p>
+                        </div>
                     )}
 
                     <button
                         type="submit"
+                        className="auth-submit-button"
                         disabled={loading}
                     >
                         {loading
                             ? "Creating account..."
-                            : "Register"}
+                            : "Create Account"}
                     </button>
-
                 </form>
 
-                <p>
-                    Already have an account?{" "}
+                <div className="auth-footer">
+                    <span>Already have an account?</span>{" "}
                     <Link to="/login">
-                        Login
+                        Sign in
                     </Link>
-                </p>
-
+                </div>
             </div>
-
         </div>
     );
 }
