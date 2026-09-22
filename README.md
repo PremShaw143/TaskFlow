@@ -98,9 +98,13 @@ The dashboard provides:
 
 React Frontend → REST API / WebSocket → FastAPI Backend → SQLAlchemy → PostgreSQL
 
+ 
+
 ## 📂 Project Structure
 
+```text
 TaskFlow/
+│
 ├── backend/
 │   ├── app/
 │   │   ├── models/
@@ -111,23 +115,27 @@ TaskFlow/
 │   │   │   ├── refresh_token.py
 │   │   │   ├── task.py
 │   │   │   └── user.py
+│   │   │
 │   │   ├── routers/
 │   │   │   ├── assigned.py
 │   │   │   ├── auth.py
 │   │   │   ├── dashboard.py
 │   │   │   ├── projects.py
 │   │   │   └── tasks.py
+│   │   │
 │   │   ├── schemas/
 │   │   ├── auth.py
 │   │   ├── database.py
 │   │   ├── dependencies.py
 │   │   ├── main.py
 │   │   └── websocket.py
+│   │
 │   ├── alembic/
 │   ├── seed.py
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── .env.example
+│
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -135,12 +143,15 @@ TaskFlow/
 │   │   ├── hooks/
 │   │   ├── pages/
 │   │   └── services/
+│   │
 │   ├── Dockerfile
 │   ├── package.json
 │   └── vite.config.js
+│
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
+```
 
 ## 🔑 Authentication Flow
 
