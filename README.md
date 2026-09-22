@@ -7,22 +7,22 @@
 
 <p align="center">
   <a href="https://youtu.be/8po67Lk8BWc?si=E50frszcuRXNQ9b_">
-    <img src="https://img.shields.io/badge/▶️%20Watch%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch TaskFlow Demo">
+    <img src="https://img.shields.io/badge/▶️_Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo">
   </a>
   <a href="https://github.com/PremShaw143/TaskFlow">
-    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+    <img src="https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Frontend-React%20%7C%20JavaScript%20%7C%20Vite-61DAFB?style=flat-square&logo=react&logoColor=black">
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
-  <img src="https://img.shields.io/badge/Real--Time-WebSockets-6A1B9A?style=flat-square">
-  <img src="https://img.shields.io/badge/DevOps-Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+  <img src="https://img.shields.io/badge/Frontend-React%20%7C%20JavaScript%20%7C%20Vite-61DAFB?style=flat-square&logo=react&logoColor=black" alt="Frontend">
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="Backend">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="Database">
+  <img src="https://img.shields.io/badge/Real--Time-WebSockets-6A1B9A?style=flat-square" alt="WebSockets">
+  <img src="https://img.shields.io/badge/DevOps-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
 </p>
 
-🎥 Project Demo: Watch the TaskFlow Demo on YouTube
+🎥 Project Demo: Watch TaskFlow on YouTube
 
 ✨ What is TaskFlow?
 
@@ -44,7 +44,7 @@ WebSocket-powered live updates
 
 Projects, members, tasks, comments & activity
 
-Dashboard, filters, sorting & task analytics
+Dashboard, filtering, sorting & task analytics
 
 🆕 Latest Features
 
@@ -454,19 +454,11 @@ python seed.py
 
 The seed script creates reusable demo users, a shared project, memberships, and sample tasks.
 
-Seed users
+Seed data
 
-Owner
+The seed script creates reusable demo users, a shared project, memberships, and sample tasks for local development.
 
-Email: seed.owner@taskflow.com
-Password: SeedOwner@123
-
-Member
-
-Email: seed.member@taskflow.com
-Password: SeedMember@123
-
-These credentials are intended for local/demo development. Change or remove demo credentials before using a production deployment.
+Demo credentials are intentionally not included in this repository README. Configure your own local credentials when seeding demo data.
 
 6. Start the Backend
 
