@@ -68,7 +68,7 @@ async function refreshSession() {
         if (!refreshToken) {
 
             throw new Error(
-                "Refresh token not found"
+                "Invalid email or password. Please try again."
             );
         }
 
