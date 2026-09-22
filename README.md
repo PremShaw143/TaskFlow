@@ -154,7 +154,7 @@ TaskFlow/
 ```
 
 ## 🔑 Authentication Flow
-
+``` text
 User Login
 ↓
 Access Token + Refresh Token
@@ -166,6 +166,7 @@ Access Token expires
 Refresh Token
 ↓
 New Access Token
+```
 
 ## 🔒 Authorization
 
@@ -211,7 +212,7 @@ User
 │       └── Activity
 │
 └── Refresh Token
-
+```
 ### Core Tables
 
 | Table               | Purpose                    |
@@ -421,7 +422,7 @@ The architecture, integration, testing, debugging, and final implementation were
 * Improved WebSocket reconnection and state recovery
 
 ## 📌 Demo Flow
-
+``` text
 Register Users
 ↓
 Create Project
@@ -439,7 +440,7 @@ Add Comment
 View Activity
 ↓
 Check Dashboard
-
+```
 ## 👨‍💻 Author
 
 Prem Kumar Shaw
