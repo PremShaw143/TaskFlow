@@ -1,16 +1,54 @@
 🚀 TaskFlow
 
-A full-stack, real-time project and task management application built with React, FastAPI, PostgreSQL, JWT authentication, and WebSockets.
+<p align="center">
+  <strong>A full-stack, real-time project and task management platform for modern teams.</strong><br>
+  Built with React, FastAPI, PostgreSQL, JWT Authentication & WebSockets.
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/8po67Lk8BWc?si=E50frszcuRXNQ9b_">
+    <img src="https://img.shields.io/badge/▶️%20Watch%20Demo-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch TaskFlow Demo">
+  </a>
+  <a href="https://github.com/PremShaw143/TaskFlow">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React%20%7C%20JavaScript%20%7C%20Vite-61DAFB?style=flat-square&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/Real--Time-WebSockets-6A1B9A?style=flat-square">
+  <img src="https://img.shields.io/badge/DevOps-Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+</p>
+
+🎥 Project Demo: Watch the TaskFlow Demo on YouTube
+
+✨ What is TaskFlow?
 
 TaskFlow is a Trello/Jira-style task management platform designed for teams to create projects, manage members, assign tasks, track progress, collaborate through comments, and receive real-time updates across multiple users.
 
-🎥 Project Demo
+🌟 Why TaskFlow?
 
-▶️ YouTube Demo: https://youtu.be/8po67Lk8BWc?si=E50frszcuRXNQ9b_
+🔐 Secure
+
+⚡ Real-Time
+
+👥 Collaborative
+
+📊 Insightful
+
+JWT authentication, refresh tokens & role-based access
+
+WebSocket-powered live updates
+
+Projects, members, tasks, comments & activity
+
+Dashboard, filters, sorting & task analytics
 
 🆕 Latest Features
 
-TaskFlow now includes several production-style features for secure team collaboration:
+Production-style features for secure, collaborative team workflows:
 
 🔐 JWT Authentication & Refresh Tokens — secure login sessions with protected API access.
 
@@ -27,6 +65,10 @@ TaskFlow now includes several production-style features for secure team collabor
 🐳 Dockerized Development — Dockerfiles and Docker Compose support for the application.
 
 🗃️ Database Migrations — Alembic-based schema migration workflow with PostgreSQL.
+
+🧭 Quick Navigation
+
+Features · Architecture · Tech Stack · Project Structure · Getting Started · Docker · Authentication · WebSockets · API · Future Improvements
 
 ✨ Features
 
