@@ -202,12 +202,14 @@ WebSocket connections are authenticated using JWT and project membership is veri
 
 ## 🗃️ Database Design
 
+```text
 User
 ├── Membership
 │   └── Project
 │       ├── Task
 │       │   └── Comment
 │       └── Activity
+│
 └── Refresh Token
 
 ### Core Tables
